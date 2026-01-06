@@ -1,0 +1,18 @@
+/* Load Google Fonts VT323 */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+/* Optional: define a global CSS variable */
+:root {
+  --teletext: 'VT323', monospace;
+  color: yellow;
+  background-color: black;
+}
+
+body {
+  font-family: var(--teletext);
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+

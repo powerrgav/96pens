@@ -1,0 +1,56 @@
+* {
+    word-spacing: .25rem;
+    margin: 0;
+    align-items: stretch; 
+}
+
+header {
+    font-size: xx-large;
+}
+
+/* Header bar */
+.header-bar {
+    display: flex;
+    height: 80px;
+}
+
+/* Name plate */
+.nameplate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    background: black;
+    color: yellow;
+    white-space: nowrap;
+}
+
+/* Navigation container */
+nav {
+    display: flex;
+    flex: 1;
+}
+
+
+nav a {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.5rem;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    border-left: 3px solid black;
+}
+
+
+.home  { background: yellow; }
+.players  { background: #ffcc00; }
+.results  { background: #00ccff; }
+.playoffs { background: #ff6699; }
+.nhl      { background: #66ff66; }
+
+nav a:hover {
+    filter: brightness(85%);
+}
