@@ -8,6 +8,7 @@ import { Home } from './home/home';
   imports: [RouterOutlet, Header, Home],
   template: `
               <app-header />
+              <app-home></app-home>
               `,
   styleUrl: './app.css'
 })
