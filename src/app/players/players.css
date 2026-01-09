@@ -1,0 +1,24 @@
+.landingWrapper{
+    background-color: blue;
+    border: 3px solid red;
+    margin-inline:auto;
+    padding: 2.5rem;
+}
+
+.landingHeader{
+    display: flex;
+    background-color: yellow;
+    color: black;
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 2.5rem;
+    justify-content: space-between;
+}
+
+.landingTitle{
+    font-size: 4rem;
+    color: yellow;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}

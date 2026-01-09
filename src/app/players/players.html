@@ -1,0 +1,39 @@
+<main>
+    <div class="landingWrapper"><!--Start landing wrapper-->
+        <div class="landingHeader"><!--Start landing header-->
+            <span>▼ By Gavin Power ▼</span>
+            <span>▼ 2026 ▼</span>
+        </div><!--End landing wrapper-->
+        <div class="landingTitle">
+            <span>The 1995-1996 Pittsburgh Penguins</span>
+        </div>
+    </div><!--End landing wrapper-->
+
+    <div class="playersWrapper">
+        <table>
+            
+            <thead>
+                <tr>
+                    @for(column of displayedColumns; track column){
+                        <th> {{column}} </th>
+                    }
+                </tr>
+            </thead>
+
+            <tbody> <!--loop through data-->
+                @for (player of playerData; track player.Number){
+                    <tr>
+                        @for(column of displayedColumns; track column){
+                            <td>{{ $any(player)[column]  }}</td>
+                        }
+                    </tr>
+                }@empty {
+                    <tr>
+                        <td [attr.colspan]="displayedColumns.length">no players found</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+</main>
