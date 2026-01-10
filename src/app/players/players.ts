@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { PlayerInfo } from '../player-info';
+import { GoalieInfo } from '../goalie-info';
 
 @Component({
   selector: 'app-players',
@@ -10,8 +11,8 @@ import { PlayerInfo } from '../player-info';
 })
 export class Players {  
   //define headers
-  displayedColumns: string[] = ['Number','Name', 'Position','Nationality', 'Age', 'GP', 'Goals', 'Assists', 'Points'];
-
+  displayedPlayerColumns: string[] = ['Number','Name', 'Position','Nationality', 'Age', 'GP', 'Goals', 'Assists', 'Points'];
+  displayedGoalieColumns: string[] = ['Number', 'Name', 'Nationality', 'Age', 'GP', 'SavePercent'];
   //main data
   //source https://www.hockey-reference.com/teams/PIT/1996.html
   playerData: PlayerInfo[] = [
@@ -40,10 +41,8 @@ export class Players {
     {Number: '4', Name: 'Corey Foster', Position: 'D', Nationality: 'CA', Age:26, GP:11, Goals:2,Assists:2, Points:4},
     {Number: '12', Name: 'Chris Wells', Position: 'C', Nationality: 'CA', Age:20, GP:54, Goals:2,Assists:2, Points:4},
     {Number: '52', Name: 'Rusty Fitzgerald', Position: 'C', Nationality: 'USA', Age:23, GP:21, Goals:1,Assists:2, Points:3},
-    {Number: '35', Name: 'Tom Barrasso', Position: 'G', Nationality: 'USA', Age:30, GP:49, Goals:0,Assists:3, Points:3},
     {Number: '24', Name: 'Ian Moran', Position: 'D', Nationality: 'USA', Age:23, GP:51, Goals:1,Assists:1, Points:2},
     {Number: '44', Name: 'Ed Patterson', Position: 'RW', Nationality: 'CA', Age:23, GP:35, Goals:0,Assists:2, Points:2},
-    {Number: '31', Name: 'Ken Wregget', Position: 'G', Nationality: 'CA', Age:31, GP:37, Goals:0,Assists:2, Points:2},
     {Number: '11', Name: 'Alek Stojanov', Position: 'RW', Nationality: 'CA', Age:22, GP:10, Goals:1,Assists:0, Points:1},
     {Number: '38-39', Name: 'Peter Allen', Position: 'D', Nationality: 'CA', Age:25, GP:8, Goals:0,Assists:0, Points:0},
     {Number: '28', Name: 'Jeff Christian', Position: 'LW', Nationality: 'CA', Age:25, GP:3, Goals:0,Assists:0, Points:0},
@@ -51,5 +50,10 @@ export class Players {
     {Number: '55', Name: 'Drake Berehowsky', Position: 'D', Nationality: 'CA', Age:24, GP:1, Goals:0,Assists:0, Points:0},
     {Number: '9', Name: 'Len Barrie', Position: 'C', Nationality: 'CA', Age:26, GP:5, Goals:0,Assists:0, Points:0},
     {Number: '28', Name: 'Greg Andrusak', Position: 'D', Nationality: 'CA', Age:26, GP:2, Goals:0,Assists:0, Points:0},
+  ]
+
+  goalieData: GoalieInfo[]=[
+    {Number: '35', Name: 'Tom Barrasso', Nationality: 'USA', Age: 30, GP: 49, SavePercent: '0.902'},
+    {Number: '31', Name: 'Ken Wregget', Nationality: 'CA', Age: 31, GP: 37, SavePercent: '0.905'},
   ]
 }

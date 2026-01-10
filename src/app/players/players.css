@@ -1,3 +1,8 @@
+table{
+    width: 100%;
+    text-align: center;  
+}
+
 .landingWrapper{
     background-color: blue;
     border: 3px solid red;
@@ -20,5 +25,18 @@
     color: yellow;
     font-weight: 700;
     margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    justify-items: center;
+}
+
+.playersWrapper{
+    padding-bottom: 5%;
+    border-bottom: 4px solid yellow;
+    font-size: 1.6rem; 
+}
+
+.goaliesWrapper{
+    font-size: 2rem;
+    padding-bottom: 2.5%;
 }

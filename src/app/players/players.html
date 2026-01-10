@@ -5,16 +5,17 @@
             <span>▼ 2026 ▼</span>
         </div><!--End landing wrapper-->
         <div class="landingTitle">
-            <span>The 1995-1996 Pittsburgh Penguins</span>
+            <span>The 1995-1996 Pittsburgh Penguins Players and Goalie Statistics</span>
         </div>
     </div><!--End landing wrapper-->
 
     <div class="playersWrapper">
+        <p style="font-size: 3rem; padding-left: 3%;">Skater Statistics</p>
         <table>
             
             <thead>
                 <tr>
-                    @for(column of displayedColumns; track column){
+                    @for(column of displayedPlayerColumns; track column){
                         <th> {{column}} </th>
                     }
                 </tr>
@@ -23,13 +24,41 @@
             <tbody> <!--loop through data-->
                 @for (player of playerData; track player.Number){
                     <tr>
-                        @for(column of displayedColumns; track column){
+                        @for(column of displayedPlayerColumns; track column){
                             <td>{{ $any(player)[column]  }}</td>
                         }
                     </tr>
                 }@empty {
                     <tr>
-                        <td [attr.colspan]="displayedColumns.length">no players found</td>
+                        <td [attr.colspan]="displayedPlayerColumns.length">no players found</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="goaliesWrapper">
+        <p style="font-size: 3rem; padding-left: 3%;">Goalie Statistics</p>
+        <table>
+            
+            <thead>
+                <tr>
+                    @for(column of displayedGoalieColumns; track column){
+                        <th> {{column}} </th>
+                    }
+                </tr>
+            </thead>
+
+            <tbody> <!--loop through data-->
+                @for (goalie of goalieData; track goalie.Number){
+                    <tr>
+                        @for(column of displayedGoalieColumns; track column){
+                            <td>{{ $any(goalie)[column]  }}</td>
+                        }
+                    </tr>
+                }@empty {
+                    <tr>
+                        <td [attr.colspan]="displayedGoalieColumns.length">no goalies found</td>
                     </tr>
                 }
             </tbody>
