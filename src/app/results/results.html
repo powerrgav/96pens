@@ -1,1 +1,41 @@
-<p>results works!</p>
+<main>
+    <div class="landingWrapper"><!--Start landing wrapper-->
+        <div class="landingHeader"><!--Start landing header-->
+            <span>▼ By Gavin Power ▼</span>
+            <span>▼ 2026 ▼</span>
+        </div><!--End landing wrapper-->
+        <div class="landingTitle">
+            <span>The 1995-1996 Pittsburgh Penguins Results</span>
+        </div>
+    </div><!--End landing wrapper-->
+
+    <div class="resultsWrapper"><!--Start main game log area-->
+
+        <p style="font-size: 3rem; padding-left: 3%;">Game Log</p>
+        
+        <table><!--Start results table-->
+
+            <thead>
+                <tr>
+                    @for (column of displayedResultsColumns; track column){
+                        <th>{{column}}</th>
+                    }
+                </tr>
+            </thead>
+
+            <tbody>
+                @for (result of resultsData; track result.Date){
+                    <tr>
+                        @for (column of displayedResultsColumns; track column){
+                            <td>{{ $any(result)[column]}}<hr></td>
+                        }@empty {
+                    <tr>
+                        <td [attr.colspan]="displayedResultsColumns.length">no results found</td>
+                    </tr>
+                }
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</main>
