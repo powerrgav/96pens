@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { Home } from './home/home';
 import { Players } from './players/players';
 import { Results } from './results/results';
+import { Playoffs } from './playoffs/playoffs';
 
 export const routes: Routes = [
     {
@@ -11,12 +12,17 @@ export const routes: Routes = [
     },
     {
         path:'players',
-        title:'test',
+        title:'Penguins Players',
         component:Players
     },
     {
         path:'results',
-        title:'Pens results',
+        title:'Penguins Results',
         component: Results
+    },
+    {
+        path:'playoffs',
+        title:'Penguins Playoffs',
+        component: Playoffs 
     }
 ];
