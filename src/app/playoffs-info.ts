@@ -5,3 +5,13 @@ export interface PlayoffsInfo {
     Games: number;
     MVP: string;
 }
+
+export interface PlayoffsGameInfo{
+    Round: number;
+    Game: number;
+    Location: string;
+    Opponent: string;
+    Result: string;
+    GF: number;
+    GA: number;
+}
